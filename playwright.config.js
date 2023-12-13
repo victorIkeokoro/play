@@ -38,7 +38,7 @@ module.exports = defineConfig({
       use: { ...devices['Desktop Chrome'],
       baseURL: testConfig["baseUrl"],
         //Browser Mode
-        headless: false,
+        headless: true,
         //Artifacts
         screenshot: `only-on-failure`,
         video: `retain-on-failure`,
@@ -49,12 +49,27 @@ module.exports = defineConfig({
 
     {
       name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
+      use: { ...devices['Desktop Firefox'],
+      baseURL: testConfig["baseUrl"],
+        //Browser Mode
+        headless: true,
+        //Artifacts
+        screenshot: `only-on-failure`,
+        video: `retain-on-failure`,
+        trace: `retain-on-failure`,},
+      
     },
 
     {
       name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
+      use: { ...devices['Desktop Safari'],
+      baseURL: testConfig["baseUrl"],
+        //Browser Mode
+        headless: true,
+        //Artifacts
+        screenshot: `only-on-failure`,
+        video: `retain-on-failure`,
+        trace: `retain-on-failure`, },
     },
 
     /* Test against mobile viewports. */
