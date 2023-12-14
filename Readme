@@ -1,0 +1,3 @@
+Automated Testing Framework for Betika Website
+Overview
+This repository contains an automated testing framework built using Playwright in JavaScript for the Betika website. The framework is designed to automate registration, login, and bet placement processes, following the Page Object Model pattern, supporting parallel execution, and is integrated to CI testing using Github actions
