@@ -14,7 +14,7 @@ export async function readJsonFile(path = 'utils/data.json') {
   }
 }
 
-export async function generateString(length: number) {
+export async function generateString(length) {
   const characters =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
@@ -26,7 +26,7 @@ export async function generateString(length: number) {
 
   return result;
 }
-export async function generateNumber(length: number) {
+export async function generateNumber(length) {
   const characters =
     "0123456789";
 
@@ -39,16 +39,6 @@ export async function generateNumber(length: number) {
   return result;
 }
 
-export function generateRandomNumberAsString(min: number, max: number): string {
-  if (min >= max) {
-    throw new Error("Minimum value must be less than the maximum value.");
-  }
-
-  const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-
-  // Convert the random number to a string using toString()
-  return randomNumber.toString();
-}
 export function getRandomNumber(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
