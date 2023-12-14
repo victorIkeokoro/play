@@ -22,7 +22,7 @@ test.describe('Login functionality', () => {
     await loginPage.login(number, password);
     await landingPage.verifyUserLoggedIn();
   });
-  test.only('login invalid details test', async ({ page, context }) => {
+  test('login invalid details test', async ({ page, context }) => {
     const jsonObject = await readJsonFile();
     const number = jsonObject.invalid
     const password = jsonObject.password
