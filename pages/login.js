@@ -22,11 +22,11 @@ export class LoginPage {
     await this.register_link.click();
   }
   async login(username, password) {
-    await this.usename_text_box.type(username, { delay: 100 });
-    await this.usename_text_box.clear();
-    await this.usename_text_box.type(username, { delay: 100 });
-    await this.password_text_box.clear();
-    await this.password_text_box.type(password, { delay: 100 });
+    await this.usename_text_box.first().type(username, { delay: 100 });
+    await this.usename_text_box.first().clear();
+    await this.usename_text_box.first().type(username, { delay: 100 });
+    await this.password_text_box.first().clear();
+    await this.password_text_box.first().type(password, { delay: 100 });
     await this.login_button.click();
   }
 }

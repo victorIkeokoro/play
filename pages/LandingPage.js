@@ -15,7 +15,7 @@ export class LandingPage {
     this.whatsapp = page.locator('a[title="Share via Whatsapp"]');
     this.copy_link = page.locator("//button[normalize-space()='Copy Link']");
     this.my_bet = page.getByRole("link", { name: "My Bets" });
-    this.my_bets = page.locator('[class="my-bets-bet"]');
+    this.my_bets = page.locator('[class="my-bets-bet--id bold"]');
     this.error = page.locator('[class="notification show error"]');
   }
 

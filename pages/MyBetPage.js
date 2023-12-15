@@ -1,3 +1,4 @@
+import { expect } from "@playwright/test";
 export class MyBetPage {
   constructor(page, context) {
     this.page = page;
@@ -7,7 +8,8 @@ export class MyBetPage {
       name: "Request Cashout",
     });
     this.continue = page.getByText("Continue");
-    this.cashout = page.getByText("Cashout", { exact: true });
+    this.cashout = page.locator(".cashout-bet-detail div");
+    this.confirm_cashout = page.locator(".confirm-dialogue__ok-btn");
     this.cancel = page.getByRole("button", { name: "Cancel" });
     this.success_modal = page.locator("[class='notification show success']");
   }
@@ -26,6 +28,9 @@ export class MyBetPage {
   }
   async click_cashout() {
     await this.cashout.click();
+  }
+  async click_confirm_cashout() {
+    await this.confirm_cashout.click();
   }
   async click_cancel() {
     await this.cancel.click();

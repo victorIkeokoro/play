@@ -86,8 +86,7 @@ test.describe("Login functionality", () => {
     await landingPage.clickOneBet();
     await myBetPage.click_request_cashout();
     await myBetPage.click_cashout();
-    await myBetPage.clickContinue();
-    await myBetPage.click_cashout();
+    await myBetPage.click_confirm_cashout();
     await myBetPage.verifySuccessModal();
   });
   test("Cancel bet test", async () => {
